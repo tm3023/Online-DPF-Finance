@@ -1,0 +1,13 @@
+{
+  "pretrain": {
+    "n_seeds": 10,
+    "n_windows": 500,
+    "pooled_mean": 3.2677884100317955,
+    "pooled_std": 1.5463591162859918,
+    "per_seed_mean": 3.2677884100317955,
+    "per_seed_std": 1.3857198617314073,
+    "paper_mean": 5.3,
+    "paper_std": 3.51,
+    "pooled_mean_within_paper_1sd": true
+  }
+}

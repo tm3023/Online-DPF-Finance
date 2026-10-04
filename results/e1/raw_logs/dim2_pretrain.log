@@ -1,0 +1,663 @@
+trainType: pretrain labelled_ratio: 1.0
+
+Training the "linear Gaussian state space model" autoencoder.
+offline
+theta1: 0.0 theta2: [0. 0.]
+Iteration 0: Loss = 6.242, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 10: Loss = 5.677, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 20: Loss = 5.238, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 30: Loss = 4.759, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 40: Loss = 4.491, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 49: Loss = 4.078, parameter error = 14.156802,
+online
+online iteration 10 rmse 3.9744327 elbo -176.44333
+online iteration 20 rmse 4.049134 elbo -145.9169
+online iteration 30 rmse 4.2135205 elbo -253.65623
+online iteration 40 rmse 3.372657 elbo -142.63638
+online iteration 50 rmse 3.5897396 elbo -133.33777
+online iteration 60 rmse 3.3942363 elbo -156.17876
+online iteration 70 rmse 2.4258347 elbo -77.47206
+online iteration 80 rmse 3.3549178 elbo -127.62732
+online iteration 90 rmse 3.1579106 elbo -125.81643
+online iteration 100 rmse 3.0153382 elbo -139.43771
+online iteration 110 rmse 4.0759115 elbo -186.29593
+online iteration 120 rmse 3.3762717 elbo -156.31601
+online iteration 130 rmse 2.9477098 elbo -89.45791
+online iteration 140 rmse 3.1251059 elbo -122.52135
+online iteration 150 rmse 2.776473 elbo -142.03517
+online iteration 160 rmse 3.5567598 elbo -130.44438
+online iteration 170 rmse 3.425422 elbo -133.0599
+online iteration 180 rmse 5.234233 elbo -168.8092
+online iteration 190 rmse 4.1674266 elbo -246.93906
+online iteration 200 rmse 4.081504 elbo -240.58943
+online iteration 210 rmse 3.522768 elbo -128.82849
+online iteration 220 rmse 3.4612951 elbo -148.30379
+online iteration 230 rmse 3.7061265 elbo -243.9831
+online iteration 240 rmse 3.3097138 elbo -139.33127
+online iteration 250 rmse 2.8231344 elbo -123.21406
+online iteration 260 rmse 4.3383636 elbo -207.65758
+online iteration 270 rmse 2.520057 elbo -111.706276
+online iteration 280 rmse 4.640765 elbo -243.63608
+online iteration 290 rmse 3.4055305 elbo -144.84811
+online iteration 300 rmse 4.6955485 elbo -225.68489
+online iteration 310 rmse 2.8469427 elbo -116.69676
+online iteration 320 rmse 3.7029583 elbo -137.0752
+online iteration 330 rmse 2.7674978 elbo -91.83849
+online iteration 340 rmse 4.0491395 elbo -229.19147
+online iteration 350 rmse 2.6427817 elbo -103.121895
+online iteration 360 rmse 4.7906966 elbo -278.8658
+online iteration 370 rmse 3.7863123 elbo -168.57907
+online iteration 380 rmse 3.5015068 elbo -134.21252
+online iteration 390 rmse 4.0050507 elbo -179.80579
+online iteration 400 rmse 5.1255894 elbo -327.68506
+online iteration 410 rmse 2.4218032 elbo -58.768158
+online iteration 420 rmse 3.7551377 elbo -180.89775
+online iteration 430 rmse 3.7128024 elbo -189.10722
+online iteration 440 rmse 4.27668 elbo -211.0149
+online iteration 450 rmse 4.81628 elbo -177.6062
+online iteration 460 rmse 3.4991412 elbo -112.84726
+online iteration 470 rmse 2.5228112 elbo -101.206345
+online iteration 480 rmse 4.2737603 elbo -193.75813
+online iteration 490 rmse 5.2500577 elbo -335.3114
+online iteration 500 rmse 2.7071762 elbo -102.38385
+Learning rate: 0.002
+No. Experiment:1/10, onlineType: pretrain, rmse:3.72+-0.79, elbo:-174.74+-73.05, rmse_last_slice:2.71, elbo_last_slice:-102.38, 
+offline
+theta1: 0.0 theta2: [0. 0.]
+Iteration 0: Loss = 6.699, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 10: Loss = 6.268, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 20: Loss = 5.811, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 30: Loss = 5.359, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 40: Loss = 5.043, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 49: Loss = 4.689, parameter error = 14.156802,
+online
+online iteration 10 rmse 4.882063 elbo -635.24036
+online iteration 20 rmse 5.511542 elbo -754.08966
+online iteration 30 rmse 5.6002474 elbo -627.0628
+online iteration 40 rmse 6.6630106 elbo -979.6389
+online iteration 50 rmse 5.2682557 elbo -666.4784
+online iteration 60 rmse 4.068719 elbo -468.5142
+online iteration 70 rmse 4.475953 elbo -638.1406
+online iteration 80 rmse 6.0498486 elbo -712.1957
+online iteration 90 rmse 4.9950695 elbo -716.556
+online iteration 100 rmse 6.156672 elbo -1199.9417
+online iteration 110 rmse 4.695641 elbo -290.93866
+online iteration 120 rmse 6.0439453 elbo -1025.8376
+online iteration 130 rmse 4.8488603 elbo -621.14844
+online iteration 140 rmse 4.0543456 elbo -560.27374
+online iteration 150 rmse 4.9145384 elbo -909.4708
+online iteration 160 rmse 4.4958754 elbo -229.83696
+online iteration 170 rmse 5.648788 elbo -566.7589
+online iteration 180 rmse 5.454829 elbo -988.777
+online iteration 190 rmse 5.521752 elbo -537.4306
+online iteration 200 rmse 3.289124 elbo -206.2548
+online iteration 210 rmse 3.012658 elbo -194.84033
+online iteration 220 rmse 4.231047 elbo -392.71124
+online iteration 230 rmse 5.583546 elbo -535.6194
+online iteration 240 rmse 3.8064697 elbo -179.0931
+online iteration 250 rmse 4.5997586 elbo -488.17072
+online iteration 260 rmse 4.148341 elbo -622.7115
+online iteration 270 rmse 3.8158896 elbo -421.24072
+online iteration 280 rmse 3.9743202 elbo -292.64935
+online iteration 290 rmse 3.161935 elbo -301.21512
+online iteration 300 rmse 3.8220398 elbo -481.9339
+online iteration 310 rmse 3.8513207 elbo -321.20682
+online iteration 320 rmse 3.2454157 elbo -415.2746
+online iteration 330 rmse 5.6545568 elbo -883.9512
+online iteration 340 rmse 6.0885844 elbo -964.2166
+online iteration 350 rmse 2.896499 elbo -132.02571
+online iteration 360 rmse 4.411226 elbo -491.41174
+online iteration 370 rmse 5.377606 elbo -682.11096
+online iteration 380 rmse 4.0526266 elbo -356.08917
+online iteration 390 rmse 3.6614795 elbo -249.1624
+online iteration 400 rmse 5.204723 elbo -660.9539
+online iteration 410 rmse 4.590191 elbo -689.4494
+online iteration 420 rmse 4.63826 elbo -631.4592
+online iteration 430 rmse 6.189247 elbo -792.2261
+online iteration 440 rmse 4.8341336 elbo -674.4724
+online iteration 450 rmse 4.1011024 elbo -415.22333
+online iteration 460 rmse 4.5229015 elbo -331.95978
+online iteration 470 rmse 4.476559 elbo -477.67468
+online iteration 480 rmse 5.34276 elbo -1037.1766
+online iteration 490 rmse 6.500541 elbo -1342.8494
+online iteration 500 rmse 5.686163 elbo -489.92078
+Learning rate: 0.002
+No. Experiment:2/10, onlineType: pretrain, rmse:4.50+-1.04, elbo:-585.15+-329.85, rmse_last_slice:5.69, elbo_last_slice:-489.92, 
+offline
+theta1: 0.0 theta2: [0. 0.]
+Iteration 0: Loss = 9.483, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 10: Loss = 8.731, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 20: Loss = 8.053, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 30: Loss = 7.357, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 40: Loss = 6.742, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 49: Loss = 6.313, parameter error = 14.156802,
+online
+online iteration 10 rmse 3.1885507 elbo -100.26742
+online iteration 20 rmse 6.581424 elbo -519.8701
+online iteration 30 rmse 7.62266 elbo -1092.9293
+online iteration 40 rmse 3.2979815 elbo -118.52405
+online iteration 50 rmse 6.730405 elbo -751.9082
+online iteration 60 rmse 6.2351947 elbo -511.65912
+online iteration 70 rmse 4.659926 elbo -389.24857
+online iteration 80 rmse 5.0223618 elbo -173.84781
+online iteration 90 rmse 3.8952105 elbo -145.04364
+online iteration 100 rmse 7.0748115 elbo -434.11697
+online iteration 110 rmse 7.2046824 elbo -562.0325
+online iteration 120 rmse 6.53618 elbo -524.33014
+online iteration 130 rmse 2.9737532 elbo -64.04154
+online iteration 140 rmse 4.271373 elbo -246.40714
+online iteration 150 rmse 5.69208 elbo -362.9524
+online iteration 160 rmse 8.557245 elbo -871.9155
+online iteration 170 rmse 4.9410353 elbo -165.78116
+online iteration 180 rmse 4.453077 elbo -187.56137
+online iteration 190 rmse 7.199221 elbo -1292.4382
+online iteration 200 rmse 4.28301 elbo -234.99928
+online iteration 210 rmse 5.359536 elbo -258.46136
+online iteration 220 rmse 6.1120105 elbo -418.6494
+online iteration 230 rmse 5.3458376 elbo -558.8431
+online iteration 240 rmse 3.0762737 elbo -152.22629
+online iteration 250 rmse 5.123726 elbo -468.56445
+online iteration 260 rmse 3.8775544 elbo -153.42574
+online iteration 270 rmse 5.6021404 elbo -511.2924
+online iteration 280 rmse 4.1904216 elbo -158.45992
+online iteration 290 rmse 6.0919666 elbo -289.29767
+online iteration 300 rmse 5.195092 elbo -312.26566
+online iteration 310 rmse 3.4694028 elbo -99.39878
+online iteration 320 rmse 3.6812613 elbo -116.6789
+online iteration 330 rmse 2.9451327 elbo -46.915535
+online iteration 340 rmse 5.2039633 elbo -335.45197
+online iteration 350 rmse 7.435704 elbo -349.19434
+online iteration 360 rmse 3.453869 elbo -114.7195
+online iteration 370 rmse 7.4638205 elbo -855.60706
+online iteration 380 rmse 6.276183 elbo -517.0471
+online iteration 390 rmse 4.1989408 elbo -123.592354
+online iteration 400 rmse 7.145131 elbo -659.93964
+online iteration 410 rmse 4.8842096 elbo -237.74846
+online iteration 420 rmse 5.809499 elbo -516.697
+online iteration 430 rmse 8.355548 elbo -1097.2064
+online iteration 440 rmse 7.091069 elbo -273.38165
+online iteration 450 rmse 4.875143 elbo -409.16525
+online iteration 460 rmse 4.351346 elbo -254.05617
+online iteration 470 rmse 6.707469 elbo -486.98517
+online iteration 480 rmse 5.9446354 elbo -506.03732
+online iteration 490 rmse 7.389822 elbo -592.2274
+online iteration 500 rmse 5.364703 elbo -320.29898
+Learning rate: 0.002
+No. Experiment:3/10, onlineType: pretrain, rmse:5.46+-1.55, elbo:-383.05+-265.02, rmse_last_slice:5.36, elbo_last_slice:-320.30, 
+offline
+theta1: 0.0 theta2: [0. 0.]
+Iteration 0: Loss = 3.251, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 10: Loss = 2.877, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 20: Loss = 2.597, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 30: Loss = 2.433, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 40: Loss = 2.244, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 49: Loss = 2.118, parameter error = 14.156802,
+online
+online iteration 10 rmse 2.6930802 elbo -61.544945
+online iteration 20 rmse 2.0537586 elbo -43.607903
+online iteration 30 rmse 2.3929605 elbo -90.71372
+online iteration 40 rmse 3.0045912 elbo -86.522194
+online iteration 50 rmse 1.8024906 elbo -52.811344
+online iteration 60 rmse 1.7948021 elbo -54.658714
+online iteration 70 rmse 1.6445009 elbo -82.358376
+online iteration 80 rmse 1.3782728 elbo -65.35691
+online iteration 90 rmse 1.6701379 elbo -72.77396
+online iteration 100 rmse 1.4390157 elbo -47.26224
+online iteration 110 rmse 1.5434561 elbo -54.96727
+online iteration 120 rmse 2.364736 elbo -75.58997
+online iteration 130 rmse 1.8882287 elbo -43.670082
+online iteration 140 rmse 1.371864 elbo -38.692642
+online iteration 150 rmse 1.8431886 elbo -67.11786
+online iteration 160 rmse 1.7884644 elbo -87.180664
+online iteration 170 rmse 1.8455716 elbo -42.46697
+online iteration 180 rmse 2.4656847 elbo -76.000694
+online iteration 190 rmse 1.8205279 elbo -76.5988
+online iteration 200 rmse 2.168525 elbo -63.37444
+online iteration 210 rmse 1.858951 elbo -48.10956
+online iteration 220 rmse 2.091926 elbo -29.405285
+online iteration 230 rmse 2.315705 elbo -79.59656
+online iteration 240 rmse 2.6047661 elbo -89.81089
+online iteration 250 rmse 1.3274523 elbo -47.897194
+online iteration 260 rmse 2.046399 elbo -68.34034
+online iteration 270 rmse 1.405668 elbo -50.57936
+online iteration 280 rmse 1.8934978 elbo -50.883785
+online iteration 290 rmse 1.4158583 elbo -45.2493
+online iteration 300 rmse 1.5239214 elbo -58.73569
+online iteration 310 rmse 1.3155509 elbo -44.862488
+online iteration 320 rmse 1.592024 elbo -63.650124
+online iteration 330 rmse 1.686658 elbo -72.25244
+online iteration 340 rmse 1.6398684 elbo -76.275734
+online iteration 350 rmse 1.9339589 elbo -61.98671
+online iteration 360 rmse 2.6642854 elbo -68.48503
+online iteration 370 rmse 1.4922363 elbo -43.961723
+online iteration 380 rmse 2.3289506 elbo -63.754967
+online iteration 390 rmse 1.5819665 elbo -71.852844
+online iteration 400 rmse 1.3578066 elbo -30.068415
+online iteration 410 rmse 1.2688905 elbo -80.70511
+online iteration 420 rmse 1.302309 elbo -50.359947
+online iteration 430 rmse 1.5009915 elbo -57.562267
+online iteration 440 rmse 2.342571 elbo -63.87655
+online iteration 450 rmse 1.6513218 elbo -57.844833
+online iteration 460 rmse 1.5073715 elbo -55.544968
+online iteration 470 rmse 3.2573903 elbo -96.540634
+online iteration 480 rmse 1.1915127 elbo -57.70245
+online iteration 490 rmse 1.8856239 elbo -78.12901
+online iteration 500 rmse 1.943124 elbo -90.86476
+Learning rate: 0.002
+No. Experiment:4/10, onlineType: pretrain, rmse:1.85+-0.36, elbo:-66.68+-18.32, rmse_last_slice:1.94, elbo_last_slice:-90.86, 
+offline
+theta1: 0.0 theta2: [0. 0.]
+Iteration 0: Loss = 3.457, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 10: Loss = 3.116, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 20: Loss = 2.802, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 30: Loss = 2.552, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 40: Loss = 2.224, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 49: Loss = 2.125, parameter error = 14.156802,
+online
+online iteration 10 rmse 1.690803 elbo -99.37126
+online iteration 20 rmse 2.207801 elbo -97.07425
+online iteration 30 rmse 2.9701238 elbo -127.95173
+online iteration 40 rmse 1.4297785 elbo -60.17771
+online iteration 50 rmse 2.8312747 elbo -96.49314
+online iteration 60 rmse 1.874293 elbo -80.1485
+online iteration 70 rmse 2.7449195 elbo -154.1528
+online iteration 80 rmse 2.3727224 elbo -82.093925
+online iteration 90 rmse 2.387769 elbo -72.49038
+online iteration 100 rmse 1.6582912 elbo -91.75667
+online iteration 110 rmse 2.4496913 elbo -113.37522
+online iteration 120 rmse 2.0787418 elbo -102.538445
+online iteration 130 rmse 1.6573043 elbo -71.72517
+online iteration 140 rmse 2.1192899 elbo -108.74186
+online iteration 150 rmse 1.7480135 elbo -62.884224
+online iteration 160 rmse 1.6876673 elbo -77.72037
+online iteration 170 rmse 1.9351215 elbo -73.53372
+online iteration 180 rmse 2.14796 elbo -122.28683
+online iteration 190 rmse 2.0997236 elbo -50.18362
+online iteration 200 rmse 1.7403235 elbo -101.96388
+online iteration 210 rmse 1.8653427 elbo -67.60378
+online iteration 220 rmse 3.0259855 elbo -159.01114
+online iteration 230 rmse 1.69273 elbo -66.57234
+online iteration 240 rmse 2.1717813 elbo -80.8764
+online iteration 250 rmse 2.096109 elbo -92.52681
+online iteration 260 rmse 2.5672421 elbo -103.369675
+online iteration 270 rmse 2.019433 elbo -107.055084
+online iteration 280 rmse 1.5336233 elbo -49.31198
+online iteration 290 rmse 1.7974937 elbo -101.81055
+online iteration 300 rmse 2.0870347 elbo -64.81668
+online iteration 310 rmse 2.0003388 elbo -61.168907
+online iteration 320 rmse 2.0543807 elbo -67.51221
+online iteration 330 rmse 2.0445375 elbo -100.9879
+online iteration 340 rmse 3.0601726 elbo -94.44638
+online iteration 350 rmse 2.061387 elbo -135.80844
+online iteration 360 rmse 2.9742932 elbo -152.6355
+online iteration 370 rmse 1.7317964 elbo -71.42448
+online iteration 380 rmse 1.989212 elbo -109.914734
+online iteration 390 rmse 2.0368698 elbo -64.54203
+online iteration 400 rmse 1.7208887 elbo -82.144424
+online iteration 410 rmse 2.9036252 elbo -106.23068
+online iteration 420 rmse 1.5999345 elbo -52.98993
+online iteration 430 rmse 2.224319 elbo -64.880005
+online iteration 440 rmse 2.3221772 elbo -95.882065
+online iteration 450 rmse 2.4233372 elbo -95.30986
+online iteration 460 rmse 1.4985669 elbo -47.329956
+online iteration 470 rmse 2.0861385 elbo -104.07352
+online iteration 480 rmse 2.0773947 elbo -104.93007
+online iteration 490 rmse 2.1388543 elbo -70.36119
+online iteration 500 rmse 2.3661993 elbo -82.367325
+Learning rate: 0.002
+No. Experiment:5/10, onlineType: pretrain, rmse:2.13+-0.43, elbo:-83.86+-26.53, rmse_last_slice:2.37, elbo_last_slice:-82.37, 
+offline
+theta1: 0.0 theta2: [0. 0.]
+Iteration 0: Loss = 5.219, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 10: Loss = 4.637, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 20: Loss = 4.166, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 30: Loss = 3.744, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 40: Loss = 3.473, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 49: Loss = 3.115, parameter error = 14.156802,
+online
+online iteration 10 rmse 2.429452 elbo -131.31122
+online iteration 20 rmse 2.6247482 elbo -78.789185
+online iteration 30 rmse 1.9040499 elbo -47.166115
+online iteration 40 rmse 1.9581543 elbo -57.614944
+online iteration 50 rmse 3.6220033 elbo -110.65668
+online iteration 60 rmse 2.2052512 elbo -61.291622
+online iteration 70 rmse 3.0669532 elbo -150.35602
+online iteration 80 rmse 2.2262428 elbo -80.815796
+online iteration 90 rmse 3.2661283 elbo -122.40105
+online iteration 100 rmse 2.1221058 elbo -43.130417
+online iteration 110 rmse 2.4749844 elbo -57.12518
+online iteration 120 rmse 2.7380824 elbo -92.77861
+online iteration 130 rmse 2.04076 elbo -118.465164
+online iteration 140 rmse 4.297781 elbo -198.64845
+online iteration 150 rmse 1.3682673 elbo -78.91391
+online iteration 160 rmse 2.4320571 elbo -45.0424
+online iteration 170 rmse 3.5874736 elbo -64.277374
+online iteration 180 rmse 2.064948 elbo -63.289265
+online iteration 190 rmse 3.1644247 elbo -110.82765
+online iteration 200 rmse 2.4169817 elbo -122.80729
+online iteration 210 rmse 2.1758802 elbo -72.50969
+online iteration 220 rmse 2.4964502 elbo -94.113525
+online iteration 230 rmse 1.9661491 elbo -59.93396
+online iteration 240 rmse 1.861953 elbo -57.997627
+online iteration 250 rmse 2.3539195 elbo -66.762314
+online iteration 260 rmse 2.7421515 elbo -60.64324
+online iteration 270 rmse 3.1991549 elbo -115.8633
+online iteration 280 rmse 3.8392022 elbo -165.7952
+online iteration 290 rmse 3.1697018 elbo -153.06383
+online iteration 300 rmse 2.0497365 elbo -67.461876
+online iteration 310 rmse 2.8732696 elbo -169.60782
+online iteration 320 rmse 2.20332 elbo -147.3157
+online iteration 330 rmse 3.1467292 elbo -74.52597
+online iteration 340 rmse 2.379483 elbo -167.58331
+online iteration 350 rmse 2.438349 elbo -61.963615
+online iteration 360 rmse 2.5927687 elbo -79.922226
+online iteration 370 rmse 1.7992376 elbo -52.324028
+online iteration 380 rmse 1.9160395 elbo -78.36947
+online iteration 390 rmse 2.466222 elbo -65.73663
+online iteration 400 rmse 2.7570577 elbo -78.74082
+online iteration 410 rmse 3.06612 elbo -92.34716
+online iteration 420 rmse 1.8703581 elbo -40.819168
+online iteration 430 rmse 2.357108 elbo -86.22806
+online iteration 440 rmse 2.2254217 elbo -145.6178
+online iteration 450 rmse 2.0780358 elbo -67.5094
+online iteration 460 rmse 1.7571785 elbo -52.190952
+online iteration 470 rmse 2.7727664 elbo -193.92952
+online iteration 480 rmse 2.6003444 elbo -137.28772
+online iteration 490 rmse 2.0815055 elbo -67.62297
+online iteration 500 rmse 2.8776193 elbo -75.270706
+Learning rate: 0.002
+No. Experiment:6/10, onlineType: pretrain, rmse:2.60+-0.64, elbo:-90.72+-35.84, rmse_last_slice:2.88, elbo_last_slice:-75.27, 
+offline
+theta1: 0.0 theta2: [0. 0.]
+Iteration 0: Loss = 3.570, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 10: Loss = 3.001, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 20: Loss = 2.625, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 30: Loss = 2.321, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 40: Loss = 2.189, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 49: Loss = 1.947, parameter error = 14.156802,
+online
+online iteration 10 rmse 1.8876137 elbo -43.998596
+online iteration 20 rmse 1.8836789 elbo -56.19133
+online iteration 30 rmse 1.3736185 elbo -28.512268
+online iteration 40 rmse 1.3938414 elbo -56.21216
+online iteration 50 rmse 2.0722573 elbo -62.82659
+online iteration 60 rmse 2.558496 elbo -47.997833
+online iteration 70 rmse 2.1348982 elbo -28.22218
+online iteration 80 rmse 1.8938087 elbo -46.502274
+online iteration 90 rmse 1.5849321 elbo -53.879295
+online iteration 100 rmse 1.7865628 elbo -31.839464
+online iteration 110 rmse 2.0922036 elbo -58.51847
+online iteration 120 rmse 2.1255386 elbo -60.26293
+online iteration 130 rmse 1.6917644 elbo -31.331577
+online iteration 140 rmse 1.3732024 elbo -32.15671
+online iteration 150 rmse 1.3510822 elbo -37.374687
+online iteration 160 rmse 1.4103411 elbo -33.762527
+online iteration 170 rmse 1.5423794 elbo -49.899582
+online iteration 180 rmse 2.5008326 elbo -49.167313
+online iteration 190 rmse 1.1840312 elbo -47.608536
+online iteration 200 rmse 1.4813213 elbo -53.90306
+online iteration 210 rmse 1.8970666 elbo -31.040796
+online iteration 220 rmse 2.0766256 elbo -48.31289
+online iteration 230 rmse 1.2771124 elbo -26.715471
+online iteration 240 rmse 1.5741265 elbo -43.993107
+online iteration 250 rmse 1.4797633 elbo -25.811197
+online iteration 260 rmse 1.6576028 elbo -40.428978
+online iteration 270 rmse 1.5512173 elbo -42.748543
+online iteration 280 rmse 1.9989773 elbo -40.344517
+online iteration 290 rmse 1.6012387 elbo -33.48415
+online iteration 300 rmse 2.117381 elbo -37.934372
+online iteration 310 rmse 1.3426358 elbo -54.862015
+online iteration 320 rmse 1.5475236 elbo -69.0795
+online iteration 330 rmse 1.5027921 elbo -48.51203
+online iteration 340 rmse 2.1712162 elbo -43.683628
+online iteration 350 rmse 1.5325308 elbo -51.357845
+online iteration 360 rmse 2.4392767 elbo -40.328796
+online iteration 370 rmse 1.919519 elbo -54.587563
+online iteration 380 rmse 1.710564 elbo -52.059387
+online iteration 390 rmse 1.7830508 elbo -36.78344
+online iteration 400 rmse 2.1718726 elbo -64.95808
+online iteration 410 rmse 1.538392 elbo -45.60667
+online iteration 420 rmse 1.4276272 elbo -38.678635
+online iteration 430 rmse 2.1648383 elbo -30.848299
+online iteration 440 rmse 2.4009292 elbo -49.339573
+online iteration 450 rmse 2.6177368 elbo -43.091095
+online iteration 460 rmse 1.8098453 elbo -64.37489
+online iteration 470 rmse 2.2445948 elbo -53.019783
+online iteration 480 rmse 1.852946 elbo -57.629604
+online iteration 490 rmse 1.6580616 elbo -37.900826
+online iteration 500 rmse 1.5230442 elbo -43.13489
+Learning rate: 0.002
+No. Experiment:7/10, onlineType: pretrain, rmse:1.78+-0.42, elbo:-43.86+-9.83, rmse_last_slice:1.52, elbo_last_slice:-43.13, 
+offline
+theta1: 0.0 theta2: [0. 0.]
+Iteration 0: Loss = 6.085, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 10: Loss = 5.642, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 20: Loss = 5.242, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 30: Loss = 4.905, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 40: Loss = 4.588, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 49: Loss = 4.285, parameter error = 14.156802,
+online
+online iteration 10 rmse 4.024078 elbo -311.00452
+online iteration 20 rmse 3.3957505 elbo -206.63545
+online iteration 30 rmse 4.815384 elbo -395.02063
+online iteration 40 rmse 3.694936 elbo -279.1819
+online iteration 50 rmse 3.5684254 elbo -421.50183
+online iteration 60 rmse 5.808889 elbo -684.29626
+online iteration 70 rmse 4.567693 elbo -274.52582
+online iteration 80 rmse 2.7258666 elbo -201.26013
+online iteration 90 rmse 5.0230517 elbo -459.8739
+online iteration 100 rmse 4.1130934 elbo -350.36566
+online iteration 110 rmse 4.4975324 elbo -436.61896
+online iteration 120 rmse 4.425307 elbo -352.91248
+online iteration 130 rmse 3.9875753 elbo -278.81592
+online iteration 140 rmse 3.6122253 elbo -351.28558
+online iteration 150 rmse 3.7104309 elbo -296.11087
+online iteration 160 rmse 4.6600432 elbo -462.1682
+online iteration 170 rmse 4.081861 elbo -384.04993
+online iteration 180 rmse 2.8354828 elbo -137.47726
+online iteration 190 rmse 4.6052475 elbo -607.71277
+online iteration 200 rmse 3.8731642 elbo -245.125
+online iteration 210 rmse 3.7627752 elbo -352.0998
+online iteration 220 rmse 5.095544 elbo -431.11392
+online iteration 230 rmse 2.777036 elbo -132.73593
+online iteration 240 rmse 3.6576686 elbo -221.19078
+online iteration 250 rmse 5.0495753 elbo -526.768
+online iteration 260 rmse 4.5882993 elbo -348.188
+online iteration 270 rmse 3.312319 elbo -325.1344
+online iteration 280 rmse 4.5224657 elbo -607.0138
+online iteration 290 rmse 3.8468504 elbo -302.1233
+online iteration 300 rmse 3.7293727 elbo -157.65584
+online iteration 310 rmse 3.7721274 elbo -395.95654
+online iteration 320 rmse 5.8462834 elbo -845.2672
+online iteration 330 rmse 4.132172 elbo -322.23145
+online iteration 340 rmse 6.264699 elbo -1076.1758
+online iteration 350 rmse 4.4436903 elbo -364.038
+online iteration 360 rmse 3.5161068 elbo -264.5127
+online iteration 370 rmse 3.3654041 elbo -224.10915
+online iteration 380 rmse 5.346093 elbo -662.7277
+online iteration 390 rmse 3.6221619 elbo -376.43207
+online iteration 400 rmse 4.845963 elbo -555.7207
+online iteration 410 rmse 3.706169 elbo -234.39587
+online iteration 420 rmse 4.165785 elbo -175.98949
+online iteration 430 rmse 6.2850213 elbo -938.57837
+online iteration 440 rmse 3.6441596 elbo -404.30255
+online iteration 450 rmse 4.955291 elbo -334.8563
+online iteration 460 rmse 4.187199 elbo -501.03284
+online iteration 470 rmse 4.0906277 elbo -496.78143
+online iteration 480 rmse 3.8825512 elbo -225.79753
+online iteration 490 rmse 4.052917 elbo -247.99695
+online iteration 500 rmse 3.8155224 elbo -361.74933
+Learning rate: 0.002
+No. Experiment:8/10, onlineType: pretrain, rmse:4.21+-0.78, elbo:-417.05+-189.52, rmse_last_slice:3.82, elbo_last_slice:-361.75, 
+offline
+theta1: 0.0 theta2: [0. 0.]
+Iteration 0: Loss = 3.790, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 10: Loss = 3.142, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 20: Loss = 2.686, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 30: Loss = 2.376, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 40: Loss = 2.160, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 49: Loss = 2.013, parameter error = 14.156802,
+online
+online iteration 10 rmse 1.5858252 elbo -56.753635
+online iteration 20 rmse 2.0796516 elbo -61.952248
+online iteration 30 rmse 1.7957952 elbo -70.871124
+online iteration 40 rmse 1.76942 elbo -38.825855
+online iteration 50 rmse 1.8305168 elbo -63.298992
+online iteration 60 rmse 2.1668694 elbo -82.97252
+online iteration 70 rmse 1.5443842 elbo -63.430977
+online iteration 80 rmse 1.9211676 elbo -70.99611
+online iteration 90 rmse 1.519921 elbo -57.482285
+online iteration 100 rmse 2.3371205 elbo -74.269455
+online iteration 110 rmse 1.5928937 elbo -50.195786
+online iteration 120 rmse 2.351275 elbo -80.593506
+online iteration 130 rmse 1.6084042 elbo -63.32171
+online iteration 140 rmse 1.7620766 elbo -54.127277
+online iteration 150 rmse 2.0760484 elbo -71.01552
+online iteration 160 rmse 1.930434 elbo -65.43588
+online iteration 170 rmse 1.6160173 elbo -67.19115
+online iteration 180 rmse 1.8948327 elbo -59.594833
+online iteration 190 rmse 2.2698598 elbo -33.31646
+online iteration 200 rmse 1.8503501 elbo -53.167164
+online iteration 210 rmse 1.7005675 elbo -55.70479
+online iteration 220 rmse 2.036086 elbo -77.665115
+online iteration 230 rmse 1.2264183 elbo -39.696404
+online iteration 240 rmse 2.6934183 elbo -66.28032
+online iteration 250 rmse 1.5667039 elbo -65.77992
+online iteration 260 rmse 1.6853734 elbo -47.78805
+online iteration 270 rmse 1.5472757 elbo -61.18575
+online iteration 280 rmse 2.314636 elbo -57.308624
+online iteration 290 rmse 1.0796467 elbo -51.534573
+online iteration 300 rmse 1.5693849 elbo -77.64429
+online iteration 310 rmse 1.7987858 elbo -75.81798
+online iteration 320 rmse 2.1376204 elbo -58.475994
+online iteration 330 rmse 1.7540034 elbo -40.657368
+online iteration 340 rmse 1.8089318 elbo -73.885414
+online iteration 350 rmse 2.2344794 elbo -65.984955
+online iteration 360 rmse 2.097484 elbo -44.972424
+online iteration 370 rmse 1.7242224 elbo -32.534294
+online iteration 380 rmse 1.8437319 elbo -61.972744
+online iteration 390 rmse 2.2501602 elbo -91.538605
+online iteration 400 rmse 1.830129 elbo -74.7198
+online iteration 410 rmse 1.5844508 elbo -35.272285
+online iteration 420 rmse 1.7246709 elbo -63.818447
+online iteration 430 rmse 2.124438 elbo -54.024338
+online iteration 440 rmse 1.8774819 elbo -32.573235
+online iteration 450 rmse 1.3819348 elbo -39.440315
+online iteration 460 rmse 1.7371029 elbo -47.34192
+online iteration 470 rmse 2.0564125 elbo -51.922768
+online iteration 480 rmse 1.575331 elbo -65.625916
+online iteration 490 rmse 2.220511 elbo -52.80181
+online iteration 500 rmse 1.9762862 elbo -59.321
+Learning rate: 0.002
+No. Experiment:9/10, onlineType: pretrain, rmse:1.82+-0.38, elbo:-61.62+-16.55, rmse_last_slice:1.98, elbo_last_slice:-59.32, 
+offline
+theta1: 0.0 theta2: [0. 0.]
+Iteration 0: Loss = 7.403, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 10: Loss = 6.904, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 20: Loss = 6.392, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 30: Loss = 5.882, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 40: Loss = 5.450, parameter error = 14.156802,
+theta1: 0.0 theta2: [0. 0.]
+Iteration 49: Loss = 5.103, parameter error = 14.156802,
+online
+online iteration 10 rmse 6.116116 elbo -348.51227
+online iteration 20 rmse 4.7288465 elbo -209.35477
+online iteration 30 rmse 4.254498 elbo -195.28795
+online iteration 40 rmse 6.585749 elbo -396.64246
+online iteration 50 rmse 5.7887583 elbo -586.34625
+online iteration 60 rmse 3.989171 elbo -161.93169
+online iteration 70 rmse 4.0507054 elbo -193.46786
+online iteration 80 rmse 3.9945986 elbo -185.84932
+online iteration 90 rmse 3.3334017 elbo -154.51273
+online iteration 100 rmse 5.4321947 elbo -269.9951
+online iteration 110 rmse 4.015553 elbo -206.77734
+online iteration 120 rmse 3.8184528 elbo -192.38057
+online iteration 130 rmse 4.5485597 elbo -242.33829
+online iteration 140 rmse 5.240863 elbo -184.88359
+online iteration 150 rmse 2.6167166 elbo -116.90997
+online iteration 160 rmse 3.7270992 elbo -151.53995
+online iteration 170 rmse 4.3866396 elbo -203.96698
+online iteration 180 rmse 6.967078 elbo -398.1163
+online iteration 190 rmse 3.747222 elbo -153.20175
+online iteration 200 rmse 5.0278225 elbo -221.38638
+online iteration 210 rmse 5.1235886 elbo -240.59296
+online iteration 220 rmse 5.4575496 elbo -262.58118
+online iteration 230 rmse 5.762337 elbo -397.53482
+online iteration 240 rmse 4.698284 elbo -200.51257
+online iteration 250 rmse 6.042733 elbo -322.83282
+online iteration 260 rmse 4.8548017 elbo -205.82109
+online iteration 270 rmse 4.533071 elbo -214.42772
+online iteration 280 rmse 4.8113947 elbo -280.60022
+online iteration 290 rmse 4.371195 elbo -236.98203
+online iteration 300 rmse 4.1255126 elbo -232.11551
+online iteration 310 rmse 5.3896556 elbo -196.70308
+online iteration 320 rmse 5.970683 elbo -326.03485
+online iteration 330 rmse 6.4144087 elbo -331.0251
+online iteration 340 rmse 4.5198507 elbo -318.39136
+online iteration 350 rmse 6.1646547 elbo -409.6953
+online iteration 360 rmse 5.111956 elbo -288.14932
+online iteration 370 rmse 4.494279 elbo -247.57529
+online iteration 380 rmse 3.924082 elbo -151.31358
+online iteration 390 rmse 3.2249408 elbo -113.10166
+online iteration 400 rmse 4.3082695 elbo -185.55284
+online iteration 410 rmse 4.311271 elbo -199.00386
+online iteration 420 rmse 5.4527545 elbo -322.0498
+online iteration 430 rmse 3.9835863 elbo -117.296906
+online iteration 440 rmse 5.0156927 elbo -271.70004
+online iteration 450 rmse 4.2103515 elbo -152.19345
+online iteration 460 rmse 6.0463142 elbo -430.94757
+online iteration 470 rmse 4.170759 elbo -205.96417
+online iteration 480 rmse 3.5589259 elbo -141.12524
+online iteration 490 rmse 5.1687155 elbo -295.3977
+online iteration 500 rmse 3.6699252 elbo -123.690544
+Learning rate: 0.002
+No. Experiment:10/10, onlineType: pretrain, rmse:4.60+-0.95, elbo:-233.25+-92.84, rmse_last_slice:3.67, elbo_last_slice:-123.69, 
