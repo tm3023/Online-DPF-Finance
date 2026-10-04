@@ -98,7 +98,7 @@ class TestModels():
         num_iterations = 50
 
         num_particles = 100
-        num_experiments = 50
+        num_experiments = args.num_experiments
         num_of_flows = [1]
         labelled_ratio = 0.01
         flow_types = ['nvp']

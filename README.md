@@ -91,3 +91,16 @@ This codebase builds upon the implementation from:
 ```
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
+## Attribution and changes
+
+This is a local working copy of the official OL-DPF implementation by Jiaxi Li, Xiongjie Chen and Yunpeng Li ([upstream repository](https://github.com/JiaxiLi1/Online-Learning-Differentiable-Partiacle-Filters), MIT License, copyright (c) 2023 JiaxiLi1; see `LICENSE`), accompanying:
+
+> Li, J., Chen, X., & Li, Y. (2023). Learning Differentiable Particle Filter on the Fly. *57th Asilomar Conference on Signals, Systems, and Computers*. arXiv:2312.05955.
+
+It is used here to reproduce the multivariate linear-Gaussian experiment (Table I) before extending the method to financial data. Changes from upstream (`3bb6d23`), all on branch `e1-reproduce`:
+
+- `OL-DPF-gaussian/arguments.py`, `test_losses.py`: new `--num_experiments` option (default 50, the upstream value) so fewer random simulations (seeds `0..n-1`) can be run. No other behavioural change.
+- `OL-DPF-gaussian/e1_summarise.py` (new): compares the saved online-stage RMSEs with Table I.
+- `results/e1/` (new): run logs and the reproduction table.
+
+Environment used: Windows 11, Python 3.13, PyTorch 2.14.1+cu126 on an NVIDIA RTX 3050 Laptop GPU (upstream: Ubuntu 22.04, Python 3.7, RTX 3090). The upstream code ran unmodified apart from the option above.
