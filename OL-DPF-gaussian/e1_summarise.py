@@ -11,6 +11,7 @@ aggregations, because the paper does not state which one its "mean +- std over
 Usage: python e1_summarise.py [--dim 2] [--out ../results/e1]
 """
 import argparse
+import glob
 import json
 import os
 
@@ -33,10 +34,15 @@ def main():
 
     rows, summary = [], {}
     for t in ["pretrain", "online", "supervised"]:
-        f = os.path.join("logs", f"linear_dim_{a.dim}_lr_0.002_type_{t}", "results.npz")
-        if not os.path.exists(f):
+        d = os.path.join("logs", f"linear_dim_{a.dim}_lr_0.002_type_{t}")
+        seed_files = sorted(glob.glob(os.path.join(d, "per_seed", "seed_*.npz")),
+                            key=lambda x: int(x.rsplit("_", 1)[1].split(".")[0]))
+        if seed_files:  # per-seed checkpoints (resumable runs) take precedence
+            rmse = np.stack([np.asarray(np.load(x)["rmse"], dtype=float) for x in seed_files])
+        elif os.path.exists(os.path.join(d, "results.npz")):
+            rmse = np.asarray(np.load(os.path.join(d, "results.npz"))["rmse_recorder"], dtype=float)
+        else:
             continue
-        rmse = np.asarray(np.load(f)["rmse_recorder"], dtype=float)
         per_seed = rmse.reshape(rmse.shape[0], -1).mean(axis=1)
         pm, ps = TABLE_I[a.dim][t]
         s = {

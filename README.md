@@ -99,7 +99,7 @@ This is a local working copy of the official OL-DPF implementation by Jiaxi Li, 
 
 It is used here to reproduce the multivariate linear-Gaussian experiment (Table I) before extending the method to financial data. Changes from upstream (`3bb6d23`), all on branch `e1-reproduce`:
 
-- `OL-DPF-gaussian/arguments.py`, `test_losses.py`: new `--num_experiments` option (default 50, the upstream value) so fewer random simulations (seeds `0..n-1`) can be run. No other behavioural change.
+- `OL-DPF-gaussian/arguments.py`, `test_losses.py`: new `--num_experiments` option (default 50, the upstream value) so fewer random simulations (seeds `0..n-1`) can be run; new `--seed_start` option (default 0) to resume; each seed's RMSE/ELBO arrays are also saved to `logs/.../per_seed/seed_<i>.npz` as soon as the seed finishes. Training and evaluation are unchanged.
 - `OL-DPF-gaussian/e1_summarise.py` (new): compares the saved online-stage RMSEs with Table I.
 - `results/e1/` (new): run logs and the reproduction table.
 

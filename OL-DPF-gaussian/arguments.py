@@ -23,6 +23,7 @@ def parse_args(args=None, dataset='disk'):
     parser.add_argument('--max_iter', type=int, default=100, help='max iteration in OT resampling')
     parser.add_argument('--resampler_type',type=str, default='ot', help='|ot|soft|')
     parser.add_argument('--num_experiments', type=int, default=50, help='number of random simulations (seeds 0..n-1); paper uses 50')
+    parser.add_argument('--seed_start', type=int, default=0, help='first seed to run (resume support); seeds seed_start..num_experiments-1')
 
     args = parser.parse_args()
 

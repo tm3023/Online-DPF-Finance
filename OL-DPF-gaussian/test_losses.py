@@ -137,7 +137,7 @@ class TestModels():
         for algorithm in algorithms:
             parameter_error_recorder, posterior_error_recorder, ESS_recorder = [], [], []
             rmse_recorder, elbo_recorder, all_loss_recorder = [],[],[]
-            for i in range(num_experiments):
+            for i in range(args.seed_start, num_experiments):
                 setup_seed(i)
                 initial_particles, dataloader = train.get_synthetic_dataloader(
                     lgssm.Initial(initial_loc, initial_scale).to(device),
@@ -251,6 +251,10 @@ class TestModels():
                 rmse_recorder.append(rmse_temp)
                 elbo_recorder.append(elbo_temp)
                 all_loss_recorder.append(rmse_box_temp)
+                # per-seed checkpoint so an interrupted run loses at most one seed
+                seed_dir = os.path.join("logs", f"linear_dim_{dim}_lr_{lr}_type_{args.trainType}", "per_seed")
+                os.makedirs(seed_dir, exist_ok=True)
+                np.savez(os.path.join(seed_dir, f"seed_{i}.npz"), rmse=rmse_temp, elbo=elbo_temp)
                 print('No. Experiment:{}/{}, onlineType: {}, rmse:{:.2f}+-{:.2f}, elbo:{:.2f}+-{:.2f}, rmse_last_slice:{:.2f}, elbo_last_slice:{:.2f}, '
                       .format(i+1, num_experiments,
                               args.trainType,

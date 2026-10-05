@@ -1,2 +1,8 @@
 start pretrain Sun Oct  4 21:07:26 GMTST 2026
 paused after pretrain (sequence loop stopped at Tam's request) Sun Oct  4 21:11:31 GMTST 2026
+start online Mon Oct  5 20:42:30 GMTST 2026
+online run killed at session end (3 seeds done, unsaved) Mon Oct  5 21:18:19 GMTST 2026
+start online seeds 0..9 Mon Oct  5 21:18:28 GMTST 2026
+start online seeds 0..9 05/10/2026 21:23:37.08 
+WMI launches (21:18, 21:23) died silently without output; reverted to nohup + per-seed checkpoints Mon Oct  5 21:25:44 GMTST 2026
+start online seeds 0..9 Mon Oct  5 21:25:44 GMTST 2026
