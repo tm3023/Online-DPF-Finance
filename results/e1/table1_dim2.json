@@ -20,5 +20,16 @@
     "paper_mean": 1.83,
     "paper_std": 1.47,
     "pooled_mean_within_paper_1sd": true
+  },
+  "supervised": {
+    "n_seeds": 10,
+    "n_windows": 500,
+    "pooled_mean": 1.5528309223890304,
+    "pooled_std": 0.8130374397109172,
+    "per_seed_mean": 1.5528309223890306,
+    "per_seed_std": 0.3749298525209255,
+    "paper_mean": 1.0,
+    "paper_std": 1.23,
+    "pooled_mean_within_paper_1sd": true
   }
 }
