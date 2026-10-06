@@ -9,5 +9,16 @@
     "paper_mean": 5.3,
     "paper_std": 3.51,
     "pooled_mean_within_paper_1sd": true
+  },
+  "online": {
+    "n_seeds": 10,
+    "n_windows": 500,
+    "pooled_mean": 1.9690164960622787,
+    "pooled_std": 0.6783174321749134,
+    "per_seed_mean": 1.9690164960622787,
+    "per_seed_std": 0.18810303929090438,
+    "paper_mean": 1.83,
+    "paper_std": 1.47,
+    "pooled_mean_within_paper_1sd": true
   }
 }

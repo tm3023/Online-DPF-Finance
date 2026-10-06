@@ -6,3 +6,5 @@ start online seeds 0..9 Mon Oct  5 21:18:28 GMTST 2026
 start online seeds 0..9 05/10/2026 21:23:37.08 
 WMI launches (21:18, 21:23) died silently without output; reverted to nohup + per-seed checkpoints Mon Oct  5 21:25:44 GMTST 2026
 start online seeds 0..9 Mon Oct  5 21:25:44 GMTST 2026
+end online exit=0 Tue Oct  6 07:39:57 GMTST 2026
+start supervised seeds 0..9 Tue Oct  6 07:40:13 GMTST 2026
