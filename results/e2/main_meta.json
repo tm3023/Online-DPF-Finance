@@ -1,0 +1,19 @@
+{
+  "L": 10,
+  "lr": 0.01,
+  "pretrain": {
+    "epochs": 150,
+    "n": 256,
+    "lr": 0.02
+  },
+  "n_tune": 364,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_params_nn=True": 29,
+  "n_params_nn=False": 4
+}

@@ -1,0 +1,24 @@
+C:\Users\tamea\online-dpf-finance\e2\dpf.py:109: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  hist.append(-float(loss))
+  pretrain tune nn=True seed 0: 33s, ll/obs 2.036 (saved)
+{'seed': 0, 'L': 10, 'lr': 0.001, 'mean_pred_ll': 1.9649682881818193}
+{'seed': 0, 'L': 10, 'lr': 0.003, 'mean_pred_ll': 1.9647377755609885}
+{'seed': 0, 'L': 10, 'lr': 0.01, 'mean_pred_ll': 1.962420044545424}
+{'seed': 0, 'L': 20, 'lr': 0.001, 'mean_pred_ll': 1.964169124935927}
+{'seed': 0, 'L': 20, 'lr': 0.003, 'mean_pred_ll': 1.9648389781570865}
+{'seed': 0, 'L': 20, 'lr': 0.01, 'mean_pred_ll': 1.962894098346709}
+{'seed': 0, 'L': 40, 'lr': 0.001, 'mean_pred_ll': 1.9623830487845604}
+{'seed': 0, 'L': 40, 'lr': 0.003, 'mean_pred_ll': 1.9598810603002397}
+{'seed': 0, 'L': 40, 'lr': 0.01, 'mean_pred_ll': 1.957918285213062}
+  pretrain tune nn=True seed 1: 28s, ll/obs 1.933 (saved)
+{'seed': 1, 'L': 10, 'lr': 0.001, 'mean_pred_ll': 1.858813217294251}
+{'seed': 1, 'L': 10, 'lr': 0.003, 'mean_pred_ll': 1.920094832476437}
+{'seed': 1, 'L': 10, 'lr': 0.01, 'mean_pred_ll': 1.9520405238513552}
+{'seed': 1, 'L': 20, 'lr': 0.001, 'mean_pred_ll': 1.848247383062043}
+{'seed': 1, 'L': 20, 'lr': 0.003, 'mean_pred_ll': 1.9003688632890714}
+{'seed': 1, 'L': 20, 'lr': 0.01, 'mean_pred_ll': 1.9344614421954123}
+{'seed': 1, 'L': 40, 'lr': 0.001, 'mean_pred_ll': 1.8250757285659605}
+{'seed': 1, 'L': 40, 'lr': 0.003, 'mean_pred_ll': 1.8775259875775698}
+{'seed': 1, 'L': 40, 'lr': 0.01, 'mean_pred_ll': 1.8997163828382182}
+BEST {'L': 10, 'lr': 0.01, 'mean_pred_ll': 1.9572302841983897}

@@ -1,0 +1,33 @@
+C:\Users\tamea\online-dpf-finance\e2\dpf.py:109: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+  hist.append(-float(loss))
+  pretrain main nn=True seed 0: 51s, ll/obs 2.014 (saved)
+  pretrain main nn=False seed 0: 31s, ll/obs 2.009 (saved)
+seed 0 dpf_online_nn: 27s, mean pred_ll 2.3703, final {'mu': -7.421397292385882, 'phi': 0.5982530560110189, 'sig_h': 0.6860061107380367, 'nu': 4.141484222084429}
+seed 0 dpf_online_param: 13s, mean pred_ll 2.3752, final {'mu': -7.741448330389285, 'phi': 0.761845999276626, 'sig_h': 0.25101174256379605, 'nu': 3.4179786650235306}
+seed 0 dpf_frozen_nn: 2s, mean pred_ll 2.3015, final {'mu': -6.806047358017117, 'phi': 0.887372751393335, 'sig_h': 0.5639318065012336, 'nu': 4.498060291716495}
+seed 0 pf_frozen_param: 1s, mean pred_ll 2.3196, final {'mu': -6.707934205991754, 'phi': 0.8200754471217824, 'sig_h': 0.18814682023348192, 'nu': 3.8478597153408516}
+  pretrain main nn=True seed 1: 82s, ll/obs 2.014 (saved)
+  pretrain main nn=False seed 1: 32s, ll/obs 2.010 (saved)
+seed 1 dpf_online_nn: 31s, mean pred_ll 2.3712, final {'mu': -7.357056724154227, 'phi': 0.6567450751202266, 'sig_h': 0.7033527547309784, 'nu': 4.3901288175534}
+seed 1 dpf_online_param: 13s, mean pred_ll 2.3761, final {'mu': -7.755921461669296, 'phi': 0.7882436494172207, 'sig_h': 0.2586485830448688, 'nu': 3.503324468993415}
+seed 1 dpf_frozen_nn: 2s, mean pred_ll 2.3067, final {'mu': -6.805985320767313, 'phi': 0.8747284734695009, 'sig_h': 0.5217191948203493, 'nu': 4.83446122521093}
+seed 1 pf_frozen_param: 1s, mean pred_ll 2.3204, final {'mu': -6.7186095933238805, 'phi': 0.7947351381762003, 'sig_h': 0.2090090263187245, 'nu': 3.888784299678613}
+  pretrain main nn=True seed 2: 72s, ll/obs 2.013 (saved)
+  pretrain main nn=False seed 2: 32s, ll/obs 2.010 (saved)
+seed 2 dpf_online_nn: 35s, mean pred_ll 2.3728, final {'mu': -7.355088747194722, 'phi': 0.7166873413236565, 'sig_h': 0.5981993048585272, 'nu': 4.033931281878119}
+seed 2 dpf_online_param: 13s, mean pred_ll 2.3757, final {'mu': -7.744802252984987, 'phi': 0.7779103157233734, 'sig_h': 0.25374700580189263, 'nu': 3.4439252171082444}
+seed 2 dpf_frozen_nn: 3s, mean pred_ll 2.3038, final {'mu': -6.743322561387282, 'phi': 0.9071763030342674, 'sig_h': 0.5466272019546934, 'nu': 4.277860478915299}
+seed 2 pf_frozen_param: 1s, mean pred_ll 2.3161, final {'mu': -6.699846411864603, 'phi': 0.8074159026530608, 'sig_h': 0.1886553111537979, 'nu': 3.872798553092615}
+  pretrain main nn=True seed 3: 58s, ll/obs 2.012 (saved)
+  pretrain main nn=False seed 3: 31s, ll/obs 2.009 (saved)
+seed 3 dpf_online_nn: 29s, mean pred_ll 2.3692, final {'mu': -7.418257590446289, 'phi': 0.7038505461757442, 'sig_h': 0.5319654866385823, 'nu': 3.874557633721677}
+seed 3 dpf_online_param: 13s, mean pred_ll 2.3759, final {'mu': -7.754670141394869, 'phi': 0.7489333972588668, 'sig_h': 0.26183928853093646, 'nu': 3.4879589465524328}
+seed 3 dpf_frozen_nn: 3s, mean pred_ll 2.3066, final {'mu': -6.78184562344036, 'phi': 0.9088444238170603, 'sig_h': 0.4497183272734834, 'nu': 4.1634929106606835}
+seed 3 pf_frozen_param: 1s, mean pred_ll 2.3182, final {'mu': -6.713237963900757, 'phi': 0.7725028492781737, 'sig_h': 0.2243579900050753, 'nu': 3.895400138849955}
+  pretrain main nn=True seed 4: 61s, ll/obs 2.012 (saved)
+  pretrain main nn=False seed 4: 31s, ll/obs 2.009 (saved)
+seed 4 dpf_online_nn: 35s, mean pred_ll 2.3718, final {'mu': -7.359182800451717, 'phi': 0.7452622041357629, 'sig_h': 0.5699918070647739, 'nu': 4.063268131932109}
+seed 4 dpf_online_param: 13s, mean pred_ll 2.3753, final {'mu': -7.754949765562434, 'phi': 0.7307882880833787, 'sig_h': 0.28134107458605634, 'nu': 3.477150433767753}
+seed 4 dpf_frozen_nn: 2s, mean pred_ll 2.3071, final {'mu': -6.721516665886162, 'phi': 0.8921492284511907, 'sig_h': 0.5340472737980312, 'nu': 4.32512304328616}
+seed 4 pf_frozen_param: 1s, mean pred_ll 2.3174, final {'mu': -6.7124826787254905, 'phi': 0.7808123091934082, 'sig_h': 0.2076881028446938, 'nu': 3.8571066655642072}
