@@ -1,0 +1,12 @@
+# Environments and build artefacts
+.venv/
+__pycache__/
+*.egg-info/
+
+# Market data (downloaded from Yahoo Finance; not redistributed)
+data/
+
+# Regenerable artefacts
+results/e2/ckpt/
+OL-DPF-gaussian/logs/*/results.npz
+OL-DPF-gaussian/logs/*/results_smoke_seed0_only.npz

@@ -1,106 +1,103 @@
-# Online Learning Differentiable Particle Filters (OL-DPF)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-This repository contains the official implementation of the paper:
-**"Learning Differentiable Particle Filter on the Fly"** (57th Asilomar Conference on Signals, Systems, and Computers, 2023)
-## Repository Structure
-The repository contains two main folders, each corresponding to a different experimental setup:
-### OL-DPF-gaussian (Multivariate Linear Gaussian Model)
-### OL-DPF-tracking (Non-linear Object Tracking Model)
-Each folder is self-contained with the following structure:
+# Online differentiable particle filters on financial data
+
+Two experiments with online-learning differentiable particle filters (OL-DPF):
+
+1. **E1: reproduction.** I re-ran the multivariate linear-Gaussian experiment of Li, Chen & Li (2023), *Learning Differentiable Particle Filter on the Fly*, with the authors' code.
+2. **E2: extension to Bitcoin.** I applied online, unsupervised particle-filter learning to daily BTC-USD returns and compared it with classical filters and GARCH, with a probe for overfitting.
+
+The original OL-DPF implementation is by Jiaxi Li, Xiongjie Chen and Yunpeng Li (MIT License). See [Attribution](#attribution-and-changes) and [`UPSTREAM_README.md`](UPSTREAM_README.md).
+
+## E1: reproduction of Table I (d = 2)
+
+10 seeds (the paper uses 50); online-stage test RMSE, mean ± sd over seed × window (`results/e1/table1_dim2.md`):
+
+| Method | Paper (Table I) | Reproduced |
+|---|---|---|
+| Pre-trained DPF | 5.30 ± 3.51 | 3.27 ± 1.55 |
+| OL-DPF | 1.83 ± 1.47 | 1.97 ± 0.68 |
+| DPF (oracle) | 1.00 ± 1.23 | 1.55 ± 0.81 |
+
+All three are within the paper's reported spread. The paper's ranking reproduces with paired tests on the same seeds:
+- OL-DPF beats the pre-trained DPF on 8 of 10 seeds (paired t-test p = 0.009);
+- the oracle beats OL-DPF on 10 of 10 seeds (p = 3e-4).
+
+The gaps between methods are smaller than published.
+
+## E2: Bitcoin
+
+A stochastic-volatility particle filter (log-volatility AR(1), Student-t returns; optionally a small zero-initialised neural residual on the transition) is updated online by one Adam step per day on a sliding-window likelihood, following Li et al.
+- **Fitting and tuning:** first year only, Oct 2021 – Sep 2022.
+- **Walk-forward evaluation:** 1,462 days, Oct 2022 – Oct 2026.
+
+Full details are in [`e2/README.md`](e2/README.md).
+
+| Model | One-step log score / day | CRPS ×100 |
+|---|---|---|
+| GARCH(1,1)-t, refitted every 20 days | **2.385** | **1.277** |
+| SV-t particle filter, online | 2.376 | 1.290 |
+| SV-t + neural residual, online | 2.371 | 1.291 |
+| Bootstrap PF, SV-t, frozen | 2.318 | 1.320 |
+| GARCH(1,1)-t, fitted once | 2.317 | 1.311 |
+| SV-t + neural residual, frozen | 2.305 | 1.328 |
+| GARCH(1,1)-N, fitted once | 2.198 | 1.383 |
+| 5-state UKF ([Bitcoin-UKF](https://github.com/tm3023/Bitcoin-UKF)) | 2.196 | 1.472 |
+
+Comparisons below are daily log-score differences with 95% block-bootstrap confidence intervals.
+
+**Online adaptation helps.** Compared with the same model frozen it gains +0.057/day [+0.032, +0.082], and against the UKF +0.179/day.
+
+**It does not beat a regularly refitted GARCH-t.** The difference is −0.009 [−0.021, +0.001], a statistical tie.
+
+**The neural residual adds nothing out of sample.** Online, it changes the score by −0.005 [−0.016, +0.006]; frozen, it makes it worse by −0.013 [−0.017, −0.010].
+
+**It also overfits sliding windows.** In-window fit minus next-day score is +0.014 [+0.006, +0.022] higher than for the plain model, most visibly around the FTX collapse.
+
+![E2 regime figure](results/fig_regime.png)
+
+## Repository layout
+
 ```
-.
-├── arguments.py        # Parameter configuration
-├── inference.py        # Inference logic and particle propagation
-├── losses.py           # Loss functions (RMSE, ELBO)
-├── train.py            # Training loop management
-├── state.py            # Particle state management
-├── aemath.py           # Mathematical utilities
-├── statistics.py       # Statistical estimation methods
-├── test_losses.py      # Core script for launching experiments
-├── lgssm.py            # State-space model implementations
-├── resamplers/
-│   └── resamplers.py   # Particle resampling implementations
-└── setup.py            # Installation script
+e2/                      E2 code: data/split/scoring (common.py), UKF and GARCH baselines (baselines.py),
+                         SV-t particle filter and online learning (dpf.py), driver (run_e2.py), README
+results/e1/              E1 tables, logs, run scripts, environment freeze
+results/e2/              E2 tables, tuning, per-seed walk-forward results, overfitting probe
+results/table_main.md    E2 main table (copy)
+results/fig_regime.png   E2 figure (copy)
+OL-DPF-gaussian/         Upstream linear-Gaussian experiment (with the small changes listed below)
+OL-DPF-tracking/         Upstream tracking experiment (unchanged)
+UPSTREAM_README.md       Original README of the upstream repository
 ```
-## Installation
-### Environment Requirements
-- Ubuntu 22.04 LTS (or other Linux distributions)
-- Python 3.7
-- CUDA-compatible GPU recommended (experiments were conducted on NVIDIA GeForce RTX 3090)
-### Setup
+
+## Reproduce
+
 ```bash
-conda create -n ol-dpf python=3.7
-conda activate ol-dpf
-git clone https://github.com/JiaxiLi1/Online-Learning-Differentiable-Partiacle-Filters.git
-cd Online-Learning-Differentiable-Partiacle-Filters
-cd OL-DPF-gaussian  # or cd OL-DPF-tracking
-pip install .
-pip install configargparse
-```
-## Experiments
-The repository supports experiments on two types of datasets:
-
-### 1. Multivariate Linear Gaussian Model
-To reproduce the results from the paper:
-```bash
-cd OL-DPF-gaussian
-python test_losses.py --resampler_type normal --device cuda --trainType online --NF-cond --measurement CRNVP --NF-dyn --num_dim 2
+python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
+# E1 (CUDA GPU required by the upstream code), one method at a time:
+bash results/e1/run_one.sh online 0        # also: pretrain, supervised
+cd OL-DPF-gaussian && ../.venv/Scripts/python e1_summarise.py --dim 2
+# E2 (CPU). Needs data/btc_usd_close_2021-10-02_2026-10-02.csv (BTC-USD daily close from Yahoo Finance,
+# not redistributed here; see Bitcoin-UKF's diagnostics.py, which downloads and caches it):
+cd e2 && ../.venv/Scripts/python run_e2.py tune && ../.venv/Scripts/python run_e2.py main && ../.venv/Scripts/python run_e2.py report
 ```
 
-Controlled parameters:
-- `num_dim`: Dimension of the model (we tested num_dim=2, 5, 10)
-- `trainType`: Choose from 'pretrain' (Pre-trained DPF), 'online' (OL-DPF), or 'supervised' (DPF(oracle))
+Long runs checkpoint as they go (per seed for E1; per grid point and per variant/seed for E2) and resume where they stopped.
 
-### 2. Non-linear Object Tracking Model
-To reproduce the results from the paper:
-```bash
-cd OL-DPF-tracking
-python test_losses.py --resampler_type normal --device cuda --trainType online --NF-cond --measurement CRNVP --NF-dyn
-```
-
-Controlled parameters:
-- `trainType`: Choose from 'pretrain' (Pre-trained DPF), 'online' (OL-DPF), or 'supervised' (DPF(oracle))
-
-### Other Parameters
-- `resampler_type`: Particle resampling method
-- `NF-dyn`: Enable normalizing flows for the dynamic model
-- `NF-cond`: Enable normalizing flows for the proposal distribution
-- `measurement`: Measurement model type
-
-## Citation
-If you find this code useful in your research, please consider citing:
-```bibtex
-@Inproceedings{li2023,
-  title={Learning Differentiable Particle Filter on the Fly},
-  author={Li, Jiaxi, Chen, Xiongjie and Li, Yunpeng},
-  booktitle={57th Asilomar Conference on Signals, Systems, and Computers},
-  year={2023}
-}
-```
-## Acknowledgments
-This codebase builds upon the implementation from:
-```bibtex
-@Inproceedings{le2018auto,
-	title={Auto-Encoding sequential {Monte Carlo}},
-	author={Le, T. A. and Igl, M. and Rainforth, T. and Jin, T. and Wood, F.},
-	booktitle={Proc. Int. Conf. Learn. Rep. (ICLR)},
-	address={Vancouver, Canada},
-	month={Apr.},
-	year={2018}
-}
-```
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
 ## Attribution and changes
 
-This is a local working copy of the official OL-DPF implementation by Jiaxi Li, Xiongjie Chen and Yunpeng Li ([upstream repository](https://github.com/JiaxiLi1/Online-Learning-Differentiable-Partiacle-Filters), MIT License, copyright (c) 2023 JiaxiLi1; see `LICENSE`), accompanying:
+The OL-DPF implementation is by Jiaxi Li, Xiongjie Chen and Yunpeng Li ([upstream repository](https://github.com/JiaxiLi1/Online-Learning-Differentiable-Partiacle-Filters), MIT License, copyright (c) 2023 JiaxiLi1; see [`LICENSE`](LICENSE)), accompanying:
 
 > Li, J., Chen, X., & Li, Y. (2023). Learning Differentiable Particle Filter on the Fly. *57th Asilomar Conference on Signals, Systems, and Computers*. arXiv:2312.05955.
 
-It is used here to reproduce the multivariate linear-Gaussian experiment (Table I) before extending the method to financial data. Changes from upstream (`3bb6d23`), all on branch `e1-reproduce`:
+Upstream itself builds on Le, Igl, Rainforth, Jin & Wood (2018), *Auto-Encoding Sequential Monte Carlo*, ICLR.
 
-- `OL-DPF-gaussian/arguments.py`, `test_losses.py`: new `--num_experiments` option (default 50, the upstream value) so fewer random simulations (seeds `0..n-1`) can be run; new `--seed_start` option (default 0) to resume; each seed's RMSE/ELBO arrays are also saved to `logs/.../per_seed/seed_<i>.npz` as soon as the seed finishes. Training and evaluation are unchanged.
-- `OL-DPF-gaussian/e1_summarise.py` (new): compares the saved online-stage RMSEs with Table I.
-- `results/e1/` (new): run logs and the reproduction table.
+Changes from upstream commit `3bb6d23`:
+- `OL-DPF-gaussian/arguments.py`, `test_losses.py`:
+  - new `--num_experiments` option (default 50, the upstream value) and `--seed_start` option (default 0);
+  - each seed's RMSE/ELBO arrays are saved to `logs/.../per_seed/seed_<i>.npz` as soon as the seed finishes.
 
-Environment used: Windows 11, Python 3.13, PyTorch 2.14.1+cu126 on an NVIDIA RTX 3050 Laptop GPU (upstream: Ubuntu 22.04, Python 3.7, RTX 3090). The upstream code ran unmodified apart from the option above.
+  Training and evaluation are unchanged.
+- `OL-DPF-gaussian/e1_summarise.py`, `results/e1/`: new, for the E1 reproduction.
+- `e2/`, `results/e2/`, `results/table_main.md`, `results/fig_regime.png`: new, for the E2 Bitcoin experiment. The E2 code is a separate, self-contained implementation following the same online-learning scheme; it does not import the upstream package.
+- `README.md` (this file) is new; the original is preserved unchanged as `UPSTREAM_README.md`.
+
+Environment used: Windows 11, Python 3.13, PyTorch 2.14.1+cu126 on an NVIDIA RTX 3050 Laptop GPU (upstream used Ubuntu 22.04, Python 3.7 and an RTX 3090).

@@ -1,0 +1,13 @@
+# Tested with Python 3.13 on Windows 11.
+# E1 needs a CUDA build of PyTorch (the upstream code hard-codes CUDA), e.g.
+#   pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cu126
+# E2 runs on CPU.
+torch==2.14.1
+numpy==2.5.3
+scipy==1.18.1
+pandas==3.0.6
+matplotlib==3.11.2
+pykalman==0.11.2
+ConfigArgParse==1.8.0
+arch==8.0.0
+filterpy==1.4.5
