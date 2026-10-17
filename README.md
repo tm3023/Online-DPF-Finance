@@ -101,3 +101,7 @@ Changes from upstream commit `3bb6d23`:
 - `README.md` (this file) is new; the original is preserved unchanged as `UPSTREAM_README.md`.
 
 Environment used: Windows 11, Python 3.13, PyTorch 2.14.1+cu126 on an NVIDIA RTX 3050 Laptop GPU (upstream used Ubuntu 22.04, Python 3.7 and an RTX 3090).
+
+## Use of AI tools
+
+Parts of this repository (experiment code, scripts, documentation) were written with the help of an AI coding assistant (Claude, Anthropic), working to my specification and decisions; commits co-authored by the assistant are marked "Co-Authored-By: Claude". I chose the experiments, checked the results and am responsible for the conclusions.
